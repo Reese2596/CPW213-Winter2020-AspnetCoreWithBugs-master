@@ -27,6 +27,8 @@ namespace AspnetCoreWithBugs
         {
             services.AddControllersWithViews();
 
+            IMvcBuilder builder = services.AddControllersWithViews();
+
             string connection = Configuration.GetConnectionString("CoreWithBugsDB-ProductDb");
 
             services.AddDbContext<ProductContext>
